@@ -10,7 +10,7 @@ I store all my practice code here—from the simplest style tests to complete la
 *   To keep a personal reference of useful code snippets.
 
 ## 📂 What's inside?
-*(Empty for now! I will update this section with direct links as I add new practice folders).*
+*   **`CSS Selectors/`** – Practice files for multiple selectors, pseudo-elements, and mini challenge projects.
 
 ---
 *Practicing one property at a time.* 💻 ✨
