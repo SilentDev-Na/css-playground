@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Manager</title>
+
+    <style>
+        /* =====================================
+           1️⃣ العنوان الرئيسي للصفحة
+           نستخدم ID لأن غالبًا يوجد عنوان واحد فقط في الصفحة
+           لذلك #main-header قوي ودقيق
+        ====================================== */
+        #main-header{
+            color: darkblue; /* لجعل النص بارز وواضح */
+            text-align: center; /* تمركز العنوان في منتصف الصفحة */
+        }
+
+        /* =====================================
+           2️⃣ الكروت (Div Card) حول كل محتوى
+           نستخدم class لأن الكروت تتكرر
+           وهذا يسمح لنا بإعادة استخدام التصميم
+        ====================================== */
+        .card{
+            border: 3px solid; /* لإظهار حدود حول الكرت */
+            background-color: gray; /* خلفية لتوضيح الكرت */
+            padding: 20px; /* مساحة داخلية بين النص وحدود الكرت */
+            margin: 60px; /* مسافة خارجية بين الكرت وبقية العناصر */
+        }
+
+        /* =====================================
+           3️⃣ استهداف الفقرات داخل الكروت فقط
+           هذا مثال على descendant selector
+           أي أي فقرة موجودة داخل .card
+        ====================================== */
+        .card p{
+            font-size: 20px; /* تكبير النص لتسهيل القراءة */
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط مريح للقراءة */
+            color: darkgreen; /* تمييز النص داخل الكرت فقط */
+        }
+
+        /* =====================================
+           4️⃣ الجداول
+           نستخدم class لأن قد يكون لدينا أكثر من جدول
+        ====================================== */
+        .tables{
+            border: 1px solid; /* حدود الجدول */
+            border-collapse: collapse; /* دمج حدود الخلايا مع حدود الجدول */
+            width: 50%; /* الجدول يمتد بعرض الكرت */
+        }
+
+        /* =====================================
+           5️⃣ رؤوس الجدول
+           نستخدم العنصر th مباشرة بدون class
+           تعلمنا أن element selector قوي وسهل للتدريب
+        ====================================== */
+        th{
+            background-color: black; /* خلفية داكنة لرؤوس الأعمدة */
+            color: white; /* النص أبيض لسهولة القراءة على الخلفية السوداء */
+            padding: 10px; /* مساحة حول النص داخل th */
+        }
+
+        /* =====================================
+           6️⃣ خلايا البيانات td
+           نستخدم element selector مباشر
+        ====================================== */
+        td{
+            border: 1px solid;
+            padding: 10px; /* مساحة داخلية لتفادي الالتصاق */
+            text-align: center; /* تمركز النص داخل الخلية */
+
+            font-size: 20px;
+        }
+
+        /* =====================================
+           7️⃣ تلوين الجدول الأول فقط
+           استخدمنا pseudo-class :first-of-type
+           لتطبيق اللون على أول كرت فقط (div:first-of-type)
+           ثم اخترنا الجدول داخله
+        ====================================== */
+        .card:first-of-type table{
+            background-color: red; /* خلفية فاتحة للجدول الأول */
+        }
+
+        /* =====================================
+           8️⃣ عند مرور الماوس على الصف
+           نستخدم pseudo-class :hover على tr
+           لتوضيح الصف عند المرور عليه
+        ====================================== */
+        tbody tr:hover{
+            background-color: lightgray; /* تمييز الصف */
+        }
+
+        /* =====================================
+           9️⃣ إضافة رمز قبل كل رأس
+           نستخدم pseudo-element ::before
+           لتضيف أيقونة قبل النص داخل th
+        ====================================== */
+        th::before{
+            content: "📦 "; /* الرمز الذي يظهر قبل كل رأس */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-header">Practice Page</h1>
+
+    <div class="card">
+        <p>Here i will show the products.</p>
+
+        <table class="tables">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                </tr>
+
+                
+            </thead>
+
+            <tbody>
+               <tr>
+                 <td>1</td>
+                <td>IPhone 7</td>
+                <td>600$</td>
+               </tr>
+
+               <tr>
+                <td>2</td>
+                <td>Headphone</td>
+                <td>30$</td>
+               </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <p>Here i will show your own orders</p>
+
+        <table class="tables">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product ID</th>
+                    <th>Date</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>01-04-2026</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>01-02-2026</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
