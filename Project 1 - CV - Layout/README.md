@@ -34,10 +34,6 @@ A modern and responsive CV website built with HTML, CSS, and JavaScript.
 - CSS Grid
 - Flexbox
 
-## Live Demo
-
-Coming Soon...
-
 ## Author
 
 **Naji Hamed Al-Quraani**
