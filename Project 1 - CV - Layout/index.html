@@ -214,7 +214,13 @@
               @media (max-width: 640px) {
              .item .when { margin-left: 0; width: 100%; }
             }
-            
+             @media (max-width: 860px) {
+            .header { grid-template-columns: 1fr; text-align: center; }
+            .avatar { justify-self: center; }
+            .grid   { grid-template-columns: 1fr; }
+            .theme-toggle { position: static; justify-self: center; margin-bottom: 10px; }
+             }
+
              @media print {
             body { background: #fff; }
             .wrapper { margin: 0; }
