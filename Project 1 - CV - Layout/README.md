@@ -16,15 +16,15 @@ A modern and responsive CV website built with HTML, CSS, and JavaScript.
 
 ### Light Mode
 
-![Light Mode](images/cv-light.png)
+![Light Mode](Images/cv-light.png)
 
 ### Dark Mode
 
-![Dark Mode](images/cv-dark.png)
+![Dark Mode](Images/cv-dark.png)
 
 ### Mobile Layout
 
-![Mobile Layout](images/cv-mobile.png)
+![Mobile Layout](Images/cv-mobile.png)
 
 ## Technologies Used
 
