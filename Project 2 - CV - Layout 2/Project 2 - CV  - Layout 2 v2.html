@@ -36,6 +36,7 @@
       --accent-2:      #737373;
       --muted-text:    #a3a1a1;
       --line:          #e5e7eb;    /* hairline borders/dividers */
+      --btns:          #f97316;
 
       /* Shape & depth */
       --radius:        18px;                     /* global rounding */
@@ -65,6 +66,7 @@
       --accent:      #fb923c;
       --line:        #1f2a44;
       --muted-text:  #ece6e6;
+      --btns:        #c2410c;
       --ring:        none; /* avoid glow on dark */
     }
 
@@ -294,7 +296,7 @@
 
     /* Links row & icon sizing (SVG fill inherits currentColor) */
     .links { display: flex; flex-wrap: wrap; gap: 12px 18px; font-size: 14px; margin-top: 8px; }
-    .icon  { width: 18px; height: 18px; flex: none; }
+    .icon  { width: 18px; height: 18px; /*flex: none;*/ flex-shrink: 0; }
 
     /* ================================================================
        🖨️ PRINT CLEANUP
@@ -319,7 +321,7 @@
     margin-top:20px;
     padding:12px 24px;
 
-    background:var(--accent);
+    background:var(--btns);
     color:white;
 
     border-radius:10px;
@@ -354,6 +356,20 @@
   .cv-btn:hover::after{
     width:calc(100% - 42px);
   }
+  .content-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .content-item a{
+    text-decoration: none;
+    color: inherit;
+  }
+.content-item:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+  transition: 0.2s ease;
+}
   </style>
 </head>
 <body>
@@ -387,19 +403,29 @@
 
         <div class="side-body">
          
+           <div class="side-card">
+            <strong>Location</strong>
+            <br>
+             <span class="content-item">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+              </svg>
+                Amman - Jordan
+              </span>
+          </div>
 
           <!-- Contact block (SVGs inherit text color via currentColor) -->
           <div class="side-card">
             <strong>Contact</strong>
             <div class="links" aria-label="Contact information">
-              <a href="mailto:you@example.com" aria-label="Email">
+              <a class="content-item" href="mailto:you@example.com" aria-label="Email">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/>
                 </svg>
                 you@example.com
               </a>
 
-              <span>
+              <span class="content-item">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.7 11.7 0 0 0 3.7.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11.7 11.7 0 0 0 .6 3.7 1 1 0 0 1-.24 1Z"/>
                 </svg>
@@ -407,30 +433,22 @@
               </span>
 
 
-              <span>
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
-              </svg>
-                Amman - Jordan
-              </span>
-
-
-
-              <a href="https://your-portfolio.example" target="_blank" rel="noopener" aria-label="Website">
+              
+              <a class="content-item" href="https://your-portfolio.example" target="_blank" rel="noopener" aria-label="Website">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 17.9V18h-2v1.9A8 8 0 0 1 4.1 13H6v-2H4.1A8 8 0 0 1 11 4.1V6h2V4.1A8 8 0 0 1 19.9 11H18v2h1.9A8 8 0 0 1 13 19.9Z"/>
                 </svg>
                 your-portfolio.example
               </a>
 
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a class="content-item" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7 0h3.8v2.05h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.77 2.64 4.77 6.08V23h-4v-6.67c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V23h-4V8z"/>
                 </svg>
                 linkedin.com/in/your-profile
               </a>
 
-              <a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">
+              <a class="content-item" href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2a11.6 11.6 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.7 1 .7 2v2.9c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/>
                 </svg>
