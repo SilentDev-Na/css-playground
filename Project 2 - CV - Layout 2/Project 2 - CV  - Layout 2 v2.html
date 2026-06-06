@@ -27,12 +27,14 @@
     :root {
       /* Surfaces & palette */
       --bg:            #f6f8fb;    /* page background */
-      --sidebar:       #0ea5a5;    /* sidebar base (teal) */
+      --sidebar:       #384759;    /* sidebar base (teal) */
       --sidebar-ink:   #ecfeff;    /* light ink used on teal sidebar */
       --card:          #ffffff;    /* card/background in main column */
       --ink:           #0f172a;    /* primary text color */
       --muted:         #6b7280;    /* secondary/quiet text */
       --accent:        #f97316;    /* brand/accent (orange) */
+      --accent-2:      #737373;
+      --muted-text:    #a3a1a1;
       --line:          #e5e7eb;    /* hairline borders/dividers */
 
       /* Shape & depth */
@@ -44,7 +46,7 @@
       --space-4: 20px; --space-5: 28px; --space-6: 40px;
 
       /* Layout caps */
-      --sidebar-w:     320px;      /* fixed sidebar width on desktop */
+      --sidebar-w:     420px;      /* fixed sidebar width on desktop */
       --maxw:          1200px;     /* page max width */
     }
 
@@ -55,13 +57,14 @@
     ================================================================= */
     :root:has(#themeSwitch:checked) {
       --bg:          #0b1220;
-      --sidebar:     #075e5e;
+      --sidebar:     #384759;
       --sidebar-ink: #c9f3f5;
       --card:        #0f172a;
       --ink:         #e5e7eb;
       --muted:       #9aa3b2;
       --accent:      #fb923c;
       --line:        #1f2a44;
+      --muted-text:  #ece6e6;
       --ring:        none; /* avoid glow on dark */
     }
 
@@ -82,7 +85,9 @@
         --ring:        none;
       }
     }
-
+    .muted{
+    color: var(--muted-text);
+    }
     /* ================================================================
        🧱 BASE & PAGE LAYOUT
     ================================================================= */
@@ -215,12 +220,31 @@
     @media (max-width: 640px)  { .cards { grid-template-columns: 1fr; }  .sidebar {position: static;} }
 
     .cardy {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 14px; padding: 18px; box-shadow: var(--ring);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--ring);
+
+      transition:
+          transform .3s ease,
+          box-shadow .3s ease;
+    }
+    .cardy:hover{
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(2,6,23,.12),
+        0 5px 10px rgba(2,6,23,.06);
     }
     .cardy h3 {
-      margin: 0 0 8px; font-size: 16px; text-transform: uppercase;
-      letter-spacing: .3px; color: var(--muted);
+      text-align:center;
+      margin:0 0 8px;
+      font-size:16px;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      color:var(--muted);
+      position:relative;
     }
 
     /* Timeline blocks for experience/projects */
