@@ -308,6 +308,31 @@
       a { color: #000; text-decoration: none; }
       .hero, .cardy, .timeline { box-shadow: none; }
     }
+    .hero-role{
+    margin:10px 0;
+    font-size:1.3rem;
+    font-weight:600;
+    }
+    .cv-btn{
+    display:inline-block;
+
+    margin-top:20px;
+    padding:12px 24px;
+
+    background:var(--accent);
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+}
+
+.cv-btn:hover{
+    transform:translateY(-3px);
+    opacity:.9;
+  }
   </style>
 </head>
 <body>
@@ -422,8 +447,17 @@
       <section class="main" aria-label="Main content">
         <!-- Intro “hero” card -->
         <header class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title">Resume</h1>
-          <p>Impact-driven front-end developer specializing in accessible, fast UIs.</p>
+          <h1 id="hero-title">Hi, Your Name</h1>
+          <h2 class="hero-role">
+             Junior Software Developer
+          </h2>
+           <p>
+            C# | SQL Server | Web Development
+          </p>
+
+            <a href="resume.pdf" download class="cv-btn">
+            Download CV
+          </a>
         </header>
 
         <!-- Quick highlight cards (auto-wrap across breakpoints) -->
