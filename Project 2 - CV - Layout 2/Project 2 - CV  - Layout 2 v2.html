@@ -141,8 +141,9 @@
       align-items: center;
     }
 
-    .avatar { width: 96px; height: 96px; border-radius: 50%; overflow: hidden;
-              border: 3px solid rgba(255,255,255,.35); }               /* soft ring */
+    .avatar { width: 100px; height: 100px; border-radius: 50%; overflow: hidden;
+              border: 3px solid rgba(255,255,255,.35); transition: transform .2s ease-in;}               /* soft ring */
+              .avatar:hover{transform: rotate(3deg) scale(1.05);}
     .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
     .name { margin: 0; font-size: clamp(22px, 4vw, 28px); line-height: 1.2; } /* fluid */
@@ -153,7 +154,7 @@
        A visually-hidden checkbox drives :root:has(#themeSwitch:checked).
        The label with class .switch is the visible control (the slider).
     ================================================================= */
-    .toggle-row { display: flex; align-items: center; gap: 10px;
+    .toggle-row { display: flex; align-items: center; gap: 10px; margin-top: 20px;
                   padding: 0 var(--space-5) var(--space-4) var(--space-5); }
 
     /* “Visually hidden” technique: still focusable by keyboard/screen readers */
@@ -377,6 +378,14 @@
     <div class="grid">
       <!-- ========================= SIDEBAR ========================= -->
       <aside class="sidebar" aria-label="Sidebar">
+         <div class="toggle-row">
+          <input type="checkbox" id="themeSwitch" />
+          <label class="switch" for="themeSwitch" aria-label="Toggle dark or light theme"></label>
+          <span class="toggle-label">Dark Mode</span>
+        </div>
+        <!-- <div class="hint">
+          Tip: this switch uses the CSS <code>:has()</code> selector to override variables.
+        </div> -->
         <div class="side-head">
           <!-- Real avatar image (replace with your own path) -->
           <div class="avatar" role="img" aria-label="Profile photo">
@@ -392,14 +401,14 @@
 
         <!-- CSS-only theme toggle:
              The hidden checkbox (#themeSwitch) + label(.switch) drives :has() -->
-        <div class="toggle-row">
+        <!-- <div class="toggle-row">
           <input type="checkbox" id="themeSwitch" />
           <label class="switch" for="themeSwitch" aria-label="Toggle dark or light theme"></label>
           <span class="toggle-label">Dark Mode</span>
         </div>
         <div class="hint">
           Tip: this switch uses the CSS <code>:has()</code> selector to override variables.
-        </div>
+        </div> -->
 
         <div class="side-body">
          
