@@ -262,10 +262,29 @@
     .timeline {
       background: var(--card); border: 1px solid var(--line);
       border-radius: 14px; padding: var(--space-5); box-shadow: var(--ring);
+      position: relative;
     }
     .tl-item {
       display: grid; grid-template-columns: 1fr auto; gap: 10px;
       padding: 16px 0; border-bottom: 1px dashed var(--line);
+      position: relative;
+      padding-left: 40px;
+    }
+    .tl-item::before{
+      content: "";
+      position: absolute; left: 0; top: 20px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+    .tl-item::after{
+      content: "";
+      position: absolute;
+      left: 5px; top: 32px;
+      width: 2px;
+      height: 90%;
+
+      background-color: var(--line);
     }
     .tl-item:last-child { border-bottom: 0; }
     .tl-role  { font-weight: 700; }
@@ -299,7 +318,7 @@
         <div class="side-head">
           <!-- Real avatar image (replace with your own path) -->
           <div class="avatar" role="img" aria-label="Profile photo">
-            <img src="images/MyImage.jpg" alt="Your Name portrait" loading="lazy" />
+            <img src="images/cv image.jpg" alt="Your Name portrait" loading="lazy" />
           </div>
 
           <!-- Name & headline -->
