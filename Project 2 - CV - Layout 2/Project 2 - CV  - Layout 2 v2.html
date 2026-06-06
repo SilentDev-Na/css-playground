@@ -326,12 +326,33 @@
 
     text-decoration:none;
 
-    transition:.3s ease;
+    transition: .3s ease;
+    position: relative
+   
 }
 
+
 .cv-btn:hover{
+   text-decoration:none;
     transform:translateY(-3px);
     opacity:.9;
+    box-shadow:
+        0 8px 20px rgba(249,115,22,.35);
+  }
+
+  .cv-btn::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+     left:20px;
+    bottom:10px;
+    background-color: white;
+
+    transition: width .3s ease;
+  }
+  .cv-btn:hover::after{
+    width:calc(100% - 42px);
   }
   </style>
 </head>
@@ -455,9 +476,13 @@
             C# | SQL Server | Web Development
           </p>
 
-            <a href="resume.pdf" download class="cv-btn">
+         <a href="resume.pdf"
+            download
+            class="cv-btn"
+            target="_blank"
+            rel="noopener noreferrer">
             Download CV
-          </a>
+        </a>
         </header>
 
         <!-- Quick highlight cards (auto-wrap across breakpoints) -->
