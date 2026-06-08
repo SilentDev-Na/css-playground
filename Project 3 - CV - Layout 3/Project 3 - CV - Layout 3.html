@@ -220,7 +220,10 @@
         var(--track) 0
       );
       display: grid; place-items: center; margin-inline: auto; position: relative; justify-items: center;
+
+      transition: transform .5s ease;
     }
+    .donut:hover{transform: scale(1.05) rotate(360deg);}
     .donut::after {
       /* Inner “hole”: smaller circle that sits on top to create a ring */
       content: "";
