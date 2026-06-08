@@ -202,6 +202,11 @@
       gap: var(--space-4); 
     }
     
+    .skill:focus{
+      outline: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accentA) 40%, transparent);
+      border-radius: 14px;
+    }
 
     @media (max-width: 900px) { .skills { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .skills { grid-template-columns: 1fr; } }
@@ -365,23 +370,23 @@
 
         <div class="skills" role="list">
           
-          <div role="listitem" class="skill">
+          <div role="listitem" class="skill" tabindex="0">
             <div class="donut" style="--val: 92"><span>92%</span></div>
             <p><strong>Semantic HTML</strong><br><span class="muted">Landmarks, a11y, structure</span></p>
           </div>
 
         
-          <div role="listitem" class="skill">
+          <div role="listitem" class="skill" tabindex="0">
             <div class="donut" style="--val: 88"><span>88%</span></div>
             <p><strong>Modern CSS</strong><br><span class="muted">Grid, Flex, custom props</span></p>
           </div>
 
-          <div role="listitem" class="skill">
+          <div role="listitem" class="skill" tabindex="0">
             <div class="donut" style="--val: 76"><span>76%</span></div>
             <p><strong>Accessibility</strong><br><span class="muted">WCAG, keyboard, color</span></p>
           </div>
 
-          <div role="listitem" class="skill">
+          <div role="listitem" class="skill" tabindex="0">
             <div class="donut" style="--val: 80"><span>80%</span></div>
             <p><strong>Tooling</strong><br><span class="muted">Git, GitHub, DevTools</span></p>
           </div>
