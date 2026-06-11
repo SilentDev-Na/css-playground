@@ -29,6 +29,7 @@
       --accent: #d97706;             /* Brand/accent (buttons, headings, links) */
       --card-bg: #ffffff;            /* Card & dialog surface color */
       --radius: 14px;                /* Global corner rounding */
+      --radius-2: 8px; 
       --shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Soft elevation */
       --maxw: 1000px;                /* Content max width for readable lines */
     }
@@ -238,7 +239,40 @@
     * { scrollbar-width: none !important; }
     *::-webkit-scrollbar { display: none !important; }
   }
+   .btn-link{
+    display: inline-block;
+    width: auto;
+    
+    height: 30px;
+    background: color-mix(in srgb,var( --accent) 50%,#b4680b 20%);
+    color: color-mix(in srgb, #ffffff 80%, #fffefe 30%);
+    border-radius: var(--radius-2);
+    padding: .5rem;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform .3s ease;
+    text-align: center;
+    position: relative;
+  }
+  .btn-link:hover{
+    transform: translateY(-5px);
+  }
+  .btn-link::after{
+    position: absolute;
+    content: "";
+     left: 0;
+    bottom: -2px;
 
+    width: 0;
+    height: 2px;
+
+    background: currentColor;
+
+    transition: width .3s ease;
+  }
+  .btn-link:hover::after{
+    width: 100%;
+  }
   </style>
 </head>
 
@@ -250,9 +284,9 @@
 
     <!-- Inline links that open dialogs (tiny inline JS; no external scripts) -->
     <nav>
-      <a href="#" onclick="document.getElementById('story1').showModal(); return false;">The Last Train</a>
-      <a href="#" onclick="document.getElementById('story2').showModal(); return false;">Beneath the Old Oak</a>
-      <a href="#" onclick="document.getElementById('story3').showModal(); return false;">The Paper Lantern Shop</a>
+      <a class="btn-link" href="#" onclick="document.getElementById('story1').showModal(); return false;">The Last Train</a>
+      <a class="btn-link" href="#" onclick="document.getElementById('story2').showModal(); return false;">Beneath the Old Oak</a>
+      <a class="btn-link" href="#" onclick="document.getElementById('story3').showModal(); return false;">The Paper Lantern Shop</a>
     </nav>
   </header>
 
