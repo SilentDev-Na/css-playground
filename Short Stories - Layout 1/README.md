@@ -50,24 +50,9 @@ Through modifying and improving it, I practiced:
 
 ---
 
-## 🚀 Future Improvements
-
-- Add JavaScript file to replace inline handlers
-- Add open/close animations for dialogs
-- Improve accessibility (keyboard navigation enhancements)
-- Add search or filter for stories
-
----
-
-## 📸 Preview
-
-> A clean storytelling UI with immersive reading experience
-
----
-
 ## 📌 Purpose
 
-This project was built as part of my learning journey to understand:
+This project was based on a pre-built template and was improved as part of my learning journey to understand:
 - Component-based UI design
 - Modern CSS techniques
 - Real-world front-end structuring
@@ -76,4 +61,5 @@ This project was built as part of my learning journey to understand:
 
 ## 👨‍💻 Author
 
-Built by a developer in training focusing on modern frontend development and UI design principles.
+Improved and customized by **Naji Hamed**  
+A developer in training focusing on modern frontend development and UI design principles.
