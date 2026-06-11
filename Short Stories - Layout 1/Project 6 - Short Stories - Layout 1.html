@@ -194,6 +194,12 @@
    ⚠️ Note: Requires modern :has() support (Chromium 105+, Safari 15.4+, Firefox 121+).
    ─────────────────────────────────────────────── */
 
+    @media (max-width:595px){
+    nav{
+      flex-direction: column;
+    }
+   }
+   
   @media print {
     @page { margin: 16mm; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
