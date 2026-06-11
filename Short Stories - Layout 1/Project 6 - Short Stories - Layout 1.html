@@ -116,18 +116,25 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease; /* subtle hover lift */
       text-align: center;
     }
-    .story-card:hover {
+  .story-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
-
+    .story-card:hover .story-thumb {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  
     .story-thumb {
       width: 100%;
-      height: 180px;
+      height: 260px;
+      opacity: .4;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
       object-fit: cover; /* ensure neat crop */
       display: block;
+      transition: opacity .4s ease, transform .6s ease;
     }
-
     .story-content {
       padding: 1.5rem;
     }
