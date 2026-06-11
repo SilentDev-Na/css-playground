@@ -27,7 +27,7 @@
       --ink: #0f172a;          /* main text color */
       --muted: #64748b;        /* secondary text */
       --card: #ffffff;         /* card background */
-      --line: #e5e7f0;         /* hairline borders */
+      --line: #eaf0e5;         /* hairline borders */
       --accentA: #7c3aed;      /* violet accent */
       --accentB: #14b8a6;      /* teal accent */
 
@@ -97,7 +97,7 @@
       margin: 0 auto;
       padding: var(--space-5) var(--space-4);
       display: grid;
-      grid-template-columns: 120px 1fr;          /* avatar | title */
+      grid-template-columns: 180px 1fr;          /* avatar | title */
       gap: var(--space-4);
       align-items: center;
     }
@@ -115,7 +115,7 @@
        - Punch a hole with a radial mask so the center remains transparent */
     .avatar::after {
       content: "";
-      position: absolute; inset: -4px;           /* extend a bit outside */
+      position: absolute; inset: -9px;           /* extend a bit outside */
       border-radius: inherit;
       background: conic-gradient(from 180deg, var(--accentA), var(--accentB), var(--accentA));
       -webkit-mask: radial-gradient(circle at center, transparent 58px, #000 59px);
@@ -130,6 +130,9 @@
     .hero-nav { margin-top: 10px; display: none; gap: 14px; }
     @media (max-width: 1200px) {
       .hero-nav { display: flex; justify-content: center; flex-wrap: wrap; }
+    }
+     @media (max-width: 720px) {
+      .hero-nav { display: flex; justify-content: center; flex-wrap: wrap;flex-direction: column; }
     }
     .pill {
       display: inline-block; padding: 6px 12px;
@@ -160,7 +163,8 @@
     #skills:target     ~ .dotnav a[href="#skills"],
     #experience:target ~ .dotnav a[href="#experience"],
     #projects:target   ~ .dotnav a[href="#projects"],
-    #education:target  ~ .dotnav a[href="#education"] {
+    #education:target  ~ .dotnav a[href="#education"],
+    #test:target       ~ .dotnav a[href="#test"] {
       background: linear-gradient(90deg, var(--accentA), var(--accentB));
       outline: 2px solid color-mix(in srgb, var(--accentA) 40%, var(--accentB) 60%);
       outline-offset: 2px;
@@ -202,12 +206,27 @@
       gap: var(--space-4); 
     }
     
+    .skill{
+      transition: transform .3s ease,box-shadow .3s ease;;
+    }
     .skill:focus{
       outline: none;
       box-shadow: 0 0 0 3px color-mix(in srgb, var(--accentA) 40%, transparent);
       border-radius: 14px;
     }
-
+    .skill:focus,
+    .skill:hover{
+      transform: translateY(-3px);
+    }
+    /* ACTIVE / SELECTED STATE */
+    .skill.is-active {
+       .skill.is-active {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15),
+                  0 0 0 3px color-mix(in srgb, var(--accentB) 60%, transparent);
+      border-radius: 14px;
+    }
+    }
     @media (max-width: 900px) { .skills { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .skills { grid-template-columns: 1fr; } }
 
@@ -286,10 +305,10 @@
       );
       backdrop-filter: saturate(1.1) blur(6px);
       box-shadow: var(--shadow);
-      transition: transform .2s ease, box-shadow .2s ease; /* smooth lift */
+      transition: transform .3s ease, box-shadow .2s ease; /* smooth lift */
     }
     .proj:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(2,6,23,.12); }
-    .proj h3 { margin: 0 0 6px; font-size: 16px; text-transform: uppercase; letter-spacing: .3px; color: var(--muted); }
+    .proj h3 { margin: 0 0 6px; font-size: 16px; text-transform: uppercase; letter-spacing: .7px; color: var(--muted); }
 
     /* ================================================================
        ♿ REDUCED MOTION — Respect user preference
@@ -331,6 +350,7 @@
           <a class="pill" href="#experience">Experience</a>
           <a class="pill" href="#projects">Projects</a>
           <a class="pill" href="#education">Education</a>
+          <a class="pill" href="#test">Test</a>
         </nav>
       </div>
     </div>
@@ -370,13 +390,13 @@
 
         <div class="skills" role="list">
           
-          <div role="listitem" class="skill" tabindex="0">
+          <div role="listitem" class="skill skill.is-active" tabindex="0">
             <div class="donut" style="--val: 92"><span>92%</span></div>
             <p><strong>Semantic HTML</strong><br><span class="muted">Landmarks, a11y, structure</span></p>
           </div>
 
         
-          <div role="listitem" class="skill" tabindex="0">
+          <div role="listitem" class="skill skill.is-active" tabindex="0">
             <div class="donut" style="--val: 88"><span>88%</span></div>
             <p><strong>Modern CSS</strong><br><span class="muted">Grid, Flex, custom props</span></p>
           </div>
@@ -460,6 +480,19 @@
         </ul>
       </article>
     </section>
+     <section id="test" class="section">
+      <article class="card" aria-labelledby="edu-title">
+        <h2 id="edu-title">Test Section</h2>
+        <p>
+          <strong>B.Sc. in Computer Science</strong><br/>
+          University Name • 2016—2020
+        </p>
+        <ul class="clean muted">
+          <li>Graduated with Honors</li>
+          <li>Key courses: HCI, Data Structures, Databases</li>
+        </ul>
+      </article>
+    </section>
 
     <!-- 🧭 The sticky dot nav must be a sibling AFTER the sections
          so the :target ~ .dotnav highlighting selectors can match. -->
@@ -469,6 +502,7 @@
       <a href="#experience" title="Experience"></a>
       <a href="#projects" title="Projects"></a>
       <a href="#education" title="Education"></a>
+      <a href="#test" title="Test"></a>
     </nav>
   </main>
 </body>
