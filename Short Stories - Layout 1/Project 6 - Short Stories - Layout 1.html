@@ -57,10 +57,28 @@
 
     /* ================= Header (title + inline nav) ================= */
     header {
+      width: 80%;
+      /* height: 50px; */
+      margin: 0 auto;
+      border-radius: var(--radius);
       text-align: center;
       padding: 2rem 1rem;
       background: var(--accent);
+      /* background-color: #faedcd; */
       color: white;
+      overflow: hidden;
+     animation: slideDown .8s ease-out;
+    }
+    @keyframes slideDown{
+      from{
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     header h1 {
       margin: 0;
@@ -70,6 +88,9 @@
     /* The nav links open dialogs via inline JS (showModal) */
     nav {
       margin-top: 1rem;
+      display: flex; flex-direction: row;flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
     }
     nav a {
       color: white;
@@ -196,10 +217,10 @@
 
     @media (max-width:595px){
     nav{
-      flex-direction: column;
+      flex-direction: column; gap: 1rem;
     }
    }
-   
+
   @media print {
     @page { margin: 16mm; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
