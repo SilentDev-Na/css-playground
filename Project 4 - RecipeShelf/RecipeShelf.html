@@ -83,7 +83,9 @@
     .thumb{
       width: 120px; height: 84px; object-fit: cover;
       border-radius: 12px; display:block; border: 1px solid var(--border);
+      transition: box-shadow .5s ease-in-out,transform .3s ease;
     }
+    .thumb:hover{ box-shadow: 0 6px 18px rgba(139,92,246,.28); transform: scale(0.97) }
     .meta h2{
       margin:.1rem 0 .2rem; font-size: 1.25rem; line-height:1.2; color: var(--accent);
     }
@@ -95,7 +97,10 @@
       color: var(--accent);
       border: 1px solid var(--border);
       margin-right: .2rem;
+
+      transition: transform .3s ease, background .3s ease,transform .3s ease;
     }
+    .chev:hover{ background: rgba(139,92,246,.18); transform: scale(1.1) }
     details[open] .chev{ transform: rotate(90deg); }
 
     /* Panel (revealed content) */
