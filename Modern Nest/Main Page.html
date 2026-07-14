@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Nest</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="logo-container">
+          <img class="logo-img" src="Images/logo.jpg" alt="logo" />
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Categories">Category</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="search-box">
+          <button class="search-btn">
+            <img src="Icons/search.svg" alt="" />
+          </button>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+      <div class="hero">
+        <h1>Modern Furniture</h1>
+        <button class="shop-btn">Shop Now</button>
+        <p>Modren Style For Your Life Comfy</p>
+        <img
+          class="hero-image"
+          src="Images/small-hero-removebg-preview.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <main class="wrapper">
+      <!-- About Section  -->
+      <section class="main-about-section">
+        <!-- Top Section: Story, Statistics, and Overlapping Images -->
+        <div class="intro-grid">
+          <div class="intro-text">
+            <span class="badge-premium">
+              Custom Craftsmanship For Your Spaces
+            </span>
+
+            <h2>
+              We create tables and wardrobes
+              <span>designed around your home dimensions.</span>
+            </h2>
+
+            <p>
+              We believe furniture should not be random pieces that waste your
+              room space. Our focus is on designing essential storage and living
+              elements with precision. We create smart custom wardrobes, durable
+              tables, and elegant side cabinets based on your room measurements
+              and your real organization needs, creating a comfortable and
+              visually balanced environment.
+            </p>
+
+            <div class="mini-stats-row">
+              <div class="stat-item">
+                <span class="num">100%</span>
+                <span class="label">Fully Custom Made</span>
+              </div>
+
+              <div class="stat-item">
+                <span class="num">+4,500</span>
+                <span class="label">Pieces Crafted With Precision</span>
+              </div>
+
+              <div class="stat-item">
+                <span class="num">5 Years</span>
+                <span class="label">Wood & Hardware Quality Warranty</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="collage-visual">
+            <div class="img-box img-main-tall">
+              <img
+                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"
+                alt="Modern custom wardrobes"
+              />
+            </div>
+
+            <div class="img-box img-sub-overlap">
+              <img
+                src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=600&q=80"
+                alt="Elegant wooden tables and cabinets"
+              />
+            </div>
+          </div>
+        </div>
+
+        <hr
+          style="
+            border: none;
+            border-top: 1px solid #eef2f5;
+            margin-bottom: 70px;
+          "
+        />
+
+        <div class="features-section-title">
+          <h3>Why Customers Choose Our Custom Furniture?</h3>
+        </div>
+
+        <div class="features-quad-grid">
+          <!-- Card 1 -->
+          <div class="feature-hub-card">
+            <div class="card-icon">📐</div>
+
+            <h4>Precise Measurements</h4>
+
+            <p>
+              We carefully analyze every millimeter of your room and wall layout
+              to ensure wardrobes and cabinets fit perfectly without unnecessary
+              gaps.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-hub-card">
+            <div class="card-icon">🪵</div>
+
+            <h4>Durable Premium Materials</h4>
+
+            <p>
+              We select high-quality wood, oak, beech, and treated MDF materials
+              designed to resist moisture, scratches, and daily usage.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-hub-card">
+            <div class="card-icon">🗄️</div>
+
+            <h4>Smart Storage Design</h4>
+
+            <p>
+              Our wardrobes and cabinets are internally designed around your
+              lifestyle with flexible shelves, hidden drawers, and organized
+              storage solutions.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-hub-card">
+            <div class="card-icon">🤫</div>
+
+            <h4>Silent Closing Systems</h4>
+
+            <p>
+              We use soft-close hinges and drawer systems to provide a smooth,
+              quiet, and comfortable everyday furniture experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Categories">
+        <h2>Categories</h2>
+
+        <div class="cards-container">
+          <div class="category-card">
+            <img src="Images/category-table.png" alt="tables image" />
+            <h3>Tables</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="Images/category-chair.png" alt="Chairs image" />
+            <h3>Chairs</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="Images/category-cabinet.png" alt="Cabens image" />
+            <h3>Cabens</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="Images/lamp.png" alt="Lamp image" />
+            <h3>Lambs</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="products">
+        <h2>Products</h2>
+
+        <div class="grid">
+          <!-- Item-1 -->
+          <div class="tile">
+            <input
+              class="flip-toggle"
+              type="checkbox"
+              id="flip1"
+              aria-controls="flip1-card"
+            />
+            <div
+              class="flip"
+              id="flip1-card"
+              role="group"
+              aria-label="The Last Train card"
+            >
+              <article class="face front">
+                <img
+                  class="hero-test"
+                  src="Products-Images/tv Table.png"
+                  alt="The Last Train"
+                />
+                <div class="pad">
+                  <h2 class="title">Modern Wooden Cabinet</h2>
+                  <p class="meta">
+                    Storage Furniture • Minimal Design • Walnut Finish
+                  </p>
+                </div>
+
+                <div class="pad pad--tight">
+                  <p class="excerpt" style="color: var(--muted)">
+                    A sleek modern cabinet designed for clean storage and
+                    elegant interior spaces.
+                  </p>
+                </div>
+                <label
+                  data-front
+                  class="flip-btn"
+                  for="flip1"
+                  aria-controls="flip1-card"
+                  aria-label="Flip card"
+                  >Flip</label
+                >
+              </article>
+
+              <article class="face back">
+                <div class="back-pad">
+                  <h2 class="title">Modern Lift-Top Office Desk</h2>
+                  <p class="meta">Home Office Collection • Solid Wood Finish</p>
+                  <p class="excerpt">
+                    A sleek modern office desk designed with a smart lift-top
+                    mechanism, revealing extra storage space underneath. Perfect
+                    for home offices and minimal workspaces, combining
+                    functionality with a clean architectural design.
+                  </p>
+                  <p class="hint">
+                    Click to view product details and dimensions.
+                  </p>
+                  <details>
+                    <summary>View product details & dimensions</summary>
+                    <div class="details-content">
+                      <p>
+                        <strong>Dimensions:</strong> 160cm (W) × 45cm (D) × 75cm
+                        (H)
+                      </p>
+                      <p>
+                        <strong>Material:</strong> Engineered wood (walnut
+                        finish)
+                      </p>
+                      <p>
+                        <strong>Storage:</strong> 3 main drawers + open top
+                        shelf
+                      </p>
+                      <p><strong>Weight:</strong> 42kg</p>
+                      <p>
+                        <strong>Usage:</strong> Living room / office storage
+                      </p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="actions">
+                  <button class="cart-btn">
+                    Add To Cart
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="8" cy="21" r="1" />
+                      <circle cx="19" cy="21" r="1" />
+                      <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                      />
+                    </svg>
+                  </button>
+                  <label
+                    data-back
+                    class="btn"
+                    for="flip1"
+                    aria-controls="flip1-card"
+                    aria-label="Flip back"
+                    >Back</label
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- item-2  -->
+          <div class="tile">
+            <input
+              class="flip-toggle"
+              type="checkbox"
+              id="flip2"
+              aria-controls="flip2-card"
+            />
+            <div
+              class="flip"
+              id="flip2-card"
+              role="group"
+              aria-label="Coffee Table card"
+            >
+              <article class="face front">
+                <img
+                  class="hero-test"
+                  src="Products-Images/Twin Tables.jpg"
+                  alt="Modern Coffee Table"
+                />
+                <div class="pad">
+                  <h2 class="title">Modern Coffee Table</h2>
+                  <p class="meta">
+                    Living Room • Glass Top • Black Metal Frame
+                  </p>
+                </div>
+
+                <div class="pad pad--tight">
+                  <p class="excerpt" style="color: var(--muted)">
+                    A minimal coffee table designed to fit modern living room
+                    spaces with elegance and durability.
+                  </p>
+                </div>
+                <label class="flip-btn" for="flip2">Flip</label>
+              </article>
+
+              <article class="face back">
+                <div class="back-pad">
+                  <h2 class="title">Modern Coffee Table</h2>
+                  <p class="meta">Living Room Collection • Tempered Glass</p>
+                  <p class="excerpt">
+                    A stylish coffee table featuring a tempered glass top and a
+                    strong steel frame, perfect for modern interiors.
+                  </p>
+                  <p class="hint">
+                    Click to view product details and dimensions.
+                  </p>
+                  <details>
+                    <summary>View product details & dimensions</summary>
+                    <div class="details-content">
+                      <p>
+                        <strong>Dimensions:</strong> 110cm (W) × 60cm (D) × 45cm
+                        (H)
+                      </p>
+                      <p>
+                        <strong>Material:</strong> Tempered glass + steel frame
+                      </p>
+                      <p><strong>Weight:</strong> 18kg</p>
+                      <p><strong>Usage:</strong> Living room / lounge</p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="actions">
+                  <button class="cart-btn">
+                    Add To Cart
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="8" cy="21" r="1" />
+                      <circle cx="19" cy="21" r="1" />
+                      <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                      />
+                    </svg>
+                  </button>
+                  <label class="btn" for="flip2">Back</label>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- item-3 -->
+          <div class="tile">
+            <input
+              class="flip-toggle"
+              type="checkbox"
+              id="flip3"
+              aria-controls="flip3-card"
+            />
+            <div
+              class="flip"
+              id="flip3-card"
+              role="group"
+              aria-label="Floor Coffee Table card"
+            >
+              <article class="face front">
+                <img
+                  class="hero-test"
+                  src="Products-Images/Fold Coffy Table.jpg"
+                  alt="Floor Coffee Table"
+                />
+                <div class="pad">
+                  <h2 class="title">Floor Coffee Table</h2>
+                  <p class="meta">
+                    Low Profile • Japanese Inspired • Natural Wood
+                  </p>
+                </div>
+
+                <div class="pad pad--tight">
+                  <p class="excerpt" style="color: var(--muted)">
+                    A low-height coffee table inspired by Japanese interiors,
+                    perfect for minimalist spaces.
+                  </p>
+                </div>
+                <label class="flip-btn" for="flip3">Flip</label>
+              </article>
+
+              <article class="face back">
+                <div class="back-pad">
+                  <h2 class="title">Floor Coffee Table</h2>
+                  <p class="meta">Minimal Collection • Solid Oak Finish</p>
+                  <p class="excerpt">
+                    A grounded coffee table designed for floor seating setups
+                    and calm minimalist environments.
+                  </p>
+                  <p class="hint">
+                    Click to view product details and dimensions.
+                  </p>
+                  <details>
+                    <summary>View product details & dimensions</summary>
+                    <div class="details-content">
+                      <p>
+                        <strong>Dimensions:</strong> 120cm (W) × 70cm (D) × 25cm
+                        (H)
+                      </p>
+                      <p><strong>Material:</strong> Solid oak wood</p>
+                      <p><strong>Weight:</strong> 22kg</p>
+                      <p><strong>Usage:</strong> Floor seating / tea setup</p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="actions">
+                  <button class="cart-btn">
+                    Add To Cart
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="8" cy="21" r="1" />
+                      <circle cx="19" cy="21" r="1" />
+                      <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                      />
+                    </svg>
+                  </button>
+                  <label class="btn" for="flip3">Back</label>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3>Contact</h3>
+        <p>Email: <span>example@gmail.com</span></p>
+        <p>Phone: <span>966:123456789</span></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <section>@Modern Nest</section>
+        <section>
+          <div>
+            <div>About</div>
+            <div>Links</div>
+            <div>Logo</div>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <ul>
+              <li>Terms of Use</li>
+              <li>Privace Policy</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
